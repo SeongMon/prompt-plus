@@ -2,25 +2,23 @@
 
 An unofficial implementation of [P+: Extended Textual Conditioning in Text-to-Image Generation](https://prompt-plus.github.io/) based on [mkshing/prompt-plus-pytorch](https://github.com/mkshing/prompt-plus-pytorch) and [d🧨ffusers](https://github.com/huggingface/diffusers).
 
+## Method
 ![method](assets/method.png)
 
 ## Results
-### Single Object
-### P+
-train 500 steps
+### Single Object P+ (train 500 steps)
 ![p+](assets/p+_cat_toy.png)
-
-### Textual Inversion
-train 3000 steps
+### Single Object Textual Inversion (train 3000 steps)
 ![ti](assets/ti_cat_toy.png)
 
 ### Style Mixing
 `mug_skull` is injected into cross-attention layers 5 to 7, while `cat_toy` is used for the remaining layers.
+
 ![5to8](assets/skull_cat_toy_5_to_8.png)
 
 `mug_skull` is injected into cross-attention layers 4 to 8, while `cat_toy` is used for the remaining layers.
-![4to9](assets/skull_cat_toy_4_to_9.png)
 
+![4to9](assets/skull_cat_toy_4_to_9.png)
 
 ## Installation
 ```commandline
@@ -42,7 +40,7 @@ pip install -r requirements.txt
 ```
 
 ## Training
-bash train.sh
+`bash train.sh`
 ```commandline
 placeholder_token="mug_skulls"
 initializer_token="mug"
@@ -65,8 +63,8 @@ accelerate launch train_p_plus.py \
 ```
 
 ## Inference
-bash inference.sh
 ### Prompt Plus
+`bash inference_prompt_plus.sh`
 ```commandline
 placeholder_token="mug_skulls"
 output_dir="output_images/${placeholder_token}"
@@ -88,6 +86,7 @@ python inference.py \
 ```
 
 ### Style Mixing
+`bash inference_style_mixing.sh`
 ```commandline
 placeholder_token="mug_skulls"
 placeholder_token_2="cat_statue"
@@ -138,13 +137,9 @@ This allows for **fine-grained control** over where each concept is represented,
   url={https://arxiv.org/abs/2303.09522}
 } 
 ```
-
-## Reference
-- [diffusers Textual Inversion code](https://github.com/huggingface/diffusers/tree/main/examples/textual_inversion)
-
 ---
 ## ✨ Acknowledgements
 
 - [mkshing/prompt-plus-pytorch](https://github.com/mkshing/prompt-plus-pytorch)
-- [huggingface/diffusers](https://github.com/huggingface/diffusers)
+- [huggingface/diffusers](https://github.com/huggingface/diffusers/tree/main/examples/textual_inversion)
 ---
