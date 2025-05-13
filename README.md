@@ -4,6 +4,24 @@ An unofficial implementation of [P+: Extended Textual Conditioning in Text-to-Im
 
 ![method](assets/method.png)
 
+## Results
+### Single Object
+### P+
+train 500 steps
+![p+](assets/outputs/p+_cat_toy.png)
+
+### Textual Inversion
+train 3000 steps
+![ti](assets/outputs/ti_cat_toy.png)
+
+### Style Mixing
+`mug_skull` is injected into cross-attention layers 5 to 7, while `cat_toy` is used for the remaining layers.
+![5to8](assets/outputs/skull_cat_toy_5_to_8.png)
+
+`mug_skull` is injected into cross-attention layers 4 to 8, while `cat_toy` is used for the remaining layers.
+![4to9](assets/outputs/skull_cat_toy_4_to_9.png)
+
+
 ## Installation
 ```commandline
 # 1. Clone the repository
@@ -24,6 +42,7 @@ pip install -r requirements.txt
 ```
 
 ## Training
+bash train.sh
 ```commandline
 placeholder_token="mug_skulls"
 initializer_token="mug"
@@ -46,7 +65,7 @@ accelerate launch train_p_plus.py \
 ```
 
 ## Inference
-
+bash inference.sh
 ### Prompt Plus
 ```commandline
 placeholder_token="mug_skulls"
