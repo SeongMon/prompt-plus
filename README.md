@@ -8,18 +8,18 @@ An unofficial implementation of [P+: Extended Textual Conditioning in Text-to-Im
 ### Single Object
 ### P+
 train 500 steps
-![p+](assets/outputs/p+_cat_toy.png)
+![p+](assets/p+_cat_toy.png)
 
 ### Textual Inversion
 train 3000 steps
-![ti](assets/outputs/ti_cat_toy.png)
+![ti](assets/ti_cat_toy.png)
 
 ### Style Mixing
 `mug_skull` is injected into cross-attention layers 5 to 7, while `cat_toy` is used for the remaining layers.
-![5to8](assets/outputs/skull_cat_toy_5_to_8.png)
+![5to8](assets/skull_cat_toy_5_to_8.png)
 
 `mug_skull` is injected into cross-attention layers 4 to 8, while `cat_toy` is used for the remaining layers.
-![4to9](assets/outputs/skull_cat_toy_4_to_9.png)
+![4to9](assets/skull_cat_toy_4_to_9.png)
 
 
 ## Installation
