@@ -1,6 +1,7 @@
 # prompt-plus-pytorch
+[![Project Website](https://img.shields.io/badge/Project-Website-orange)](https://prompt-plus.github.io/) [![arXiv](https://img.shields.io/badge/arXiv-2303.09522-b31b1b.svg)](https://arxiv.org/abs/2303.09522)
 
-An unofficial implementation of [P+: Extended Textual Conditioning in Text-to-Image Generation](https://prompt-plus.github.io/) based on [mkshing/prompt-plus-pytorch](https://github.com/mkshing/prompt-plus-pytorch) and [d🧨ffusers](https://github.com/huggingface/diffusers).
+An **unofficial pytorch implementation** of [P+: Extended Textual Conditioning in Text-to-Image Generation](https://prompt-plus.github.io/) based on [mkshing/prompt-plus-pytorch](https://github.com/mkshing/prompt-plus-pytorch) and [d🧨ffusers](https://github.com/huggingface/diffusers).
 
 ## Method
 ![method](assets/method.png)
@@ -122,9 +123,6 @@ For **Stable Diffusion v1.5**, there are a total of **16 cross-attention layers*
 - 6 in the **downsampling path** (0~5)
 - 1 in the **mid block** (6)
 - 9 in the **upsampling path** (7~15)
- 
-This allows for **fine-grained control** over where each concept is represented, enabling creative compositional blending of styles and content across layers.
-
 
 ## Citation
 
